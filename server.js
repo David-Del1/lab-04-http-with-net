@@ -1,3 +1,5 @@
-import server from './lib/app.js';
+const app = require('./lib/app');
 
-server.listen(5000);
+app.listen(7890, () => {
+  console.log('Application started!');
+});
