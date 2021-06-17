@@ -37,4 +37,11 @@ describe('app routes',  () => {
 
     expect(res.text).toEqual('<h1>blue</h1>');
   });
+
+  it('Go into public/index.html, read file contents, send the contents as a response', async() => {
+    const res = await request(app)
+      .get('/index.html');
+
+    expect(res.text).toEqual('<h1>This is David\'s index.html file. Please don\'t touch.</h1>');
+  });
 });
